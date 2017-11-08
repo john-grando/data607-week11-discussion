@@ -1,0 +1,43 @@
+---
+title: "Week 11 Discussion"
+author: "John Grando"
+date: "November 7, 2017"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    depth: 4
+    code_folding: hide
+---
+
+<h1>Week 11 Discussion</h1>
+
+<h2>Discussion</h2>
+
+Your task is to analyze an existing recommender system that you find interesting.  You should:
+
+1. Perform a Scenario Design analysis as described below.  Consider whether it makes sense for your selected recommender system to perform scenario design twice, once for the organization (e.g. Amazon.com) and once for the organization's customers.
+
+2. Attempt to reverse engineer what you can about the site, from the site interface and any available information that you can find on the Internet or elsewhere.
+
+3. Include specific recommendations about how to improve the site's recommendation capabilities going forward. 
+
+4. Create your report using an R Markdown file, and create a discussion thread with a link to the GitHub repo where your Markdown file notebook resides.  You are not expected to need to write code for this discussion assignment.
+
+Here are two examples of the kinds of papers that might be helpful backgrounders for your research in #2 above (if you had chosen amazon.com or nytimes.com as your web site):
+
+Greg Linden, Brent Smith, and Jeremy York, "Amazon.com Recommendations:  Item-to-Item Collaborative Filtering,"  IEEE Internet Computing, 2003(!).  https://datajobs.com/data-science-repo/Recommender-Systems-[Amazon].pdf
+
+Alex Spangher, "Building the Next New York Times Recommendation Engine", Aug 11, 2015.  http://open.blogs.nytimes.com/2015/08/11/building-the-next-new-york-times-recommendation-engine/
+
+<h2>Response</h2>
+
+As a remote worker, I love listening to pandora radio quite a bit.  After reading into it, I was actually surprised by the description of how songs are selected for users.  The target users are people who are looking to play songs via the internet vs. traditional radio.  These users want to hear songs that they like without having to arduously select large playlists.  This is accomplished by having pandora run analysis on a small subset of selected artists/songs and provide recommended tracks (which can be get a good/bad reponse rating) to play.  The most simple interpretation of how this process works I could find was actually on howstuffworks (https://computer.howstuffworks.com/internet/basics/pandora.htm).  Apparently, pandora analyzes song structure and makes its selections based on those results, rather than just play based on some metadata which is probably available for each song.  I'm assuming it has done some type of binomial (or multinomial) analysis which generate probabilities on a "good match" for your selected stations.
+
+As a side note, I used to listen to slacker radio a lot, back when pandora had a monthly time limit for the free tier, and they had sliders which apparently adjusted the variety of the music genre, time span, etc. of the settings.  I never found it to make a significant difference, but it was a cool feature in theory.
+
+Unfortunately, there's not a lot of control for pandora in terms of changing things, but I can testify that it is extremely good at picking only disney showtunes (e.g. Tangled, Beauty and the Beast, etc.).  My daugher is a big fan.  I honestly find that after long periods of time, pandora tends to overfit the song selections and it becomes a bit stale.  My suggestion would be to implement something like what slacker had or to try and stretch the match a little bit to get some variety back in.  I find myself just deleting and restarting stations after a while.
+
+<h2>Bonus</h2>
+
+<font color="red">Did you know </font><strong>that rmarkdown <i>files</i> can be </strong><font size="+2" color="blue">written in html?</font>
